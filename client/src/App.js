@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 import "./App.css";
+import UnderConstruction from './components/UnderConstruction'
 
 function App() {
   // useEffect(() => {
@@ -10,6 +11,7 @@ function App() {
   // });
   return (
     <div className="App">
+      <UnderConstruction />
       <h1>Hello world</h1>
     </div>
   );
