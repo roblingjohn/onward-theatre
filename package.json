@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "The website for a new improv theater in Atlanta, opening 2021.",
   "main": "server.js",
+  "homepage": "https://onward-theatre.herokuapp.com",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
@@ -23,10 +24,10 @@
   "bugs": {
     "url": "https://github.com/roblingjohn/onward-theatre/issues"
   },
-  "homepage": "https://github.com/roblingjohn/onward-theatre#readme",
   "dependencies": {
     "concurrently": "^5.3.0",
     "express": "^4.17.1",
+    "http-proxy-middleware": "^1.0.5",
     "if-env": "^1.0.4",
     "mongoose": "^5.10.5"
   }
