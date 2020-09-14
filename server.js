@@ -3,7 +3,7 @@ const connectDB = require("./config/db");
 const path = require("path");
 // const mongoose = require("mongoose");
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5000;
 // require("./database");
 
 connectDB()
@@ -17,14 +17,15 @@ app.get("/api/config", (req, res) => {
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
+  app.get("*"),
+  (req, res) => {
+    res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  };
 }
 
 // app.use(routes);
 
-app.get("*"),
-  (req, res) => {
-    res.sendFile(path.join(__dirname, "./client/build/index.html"));
-  };
+
 
 // mongoose
 //   .connect(process.env.MONGODB_URI || "mongodb://localhost/onward-theatre", {
