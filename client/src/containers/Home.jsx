@@ -1,13 +1,14 @@
-import React from 'react';
-import OTJumbotron from '../components/OTJumbotron';
+import React from "react";
+import OTJumbotron from "../components/OTJumbotron";
+import UpcomingShows from "../components/UpcomingShows";
 
 const Home = () => {
-    return (
-        <div>
-            <OTJumbotron/>
-            <h1>Hello world</h1>
-        </div>
-    );
+  return (
+    <div>
+      <OTJumbotron />
+      <UpcomingShows />
+    </div>
+  );
 };
 
 export default Home;
