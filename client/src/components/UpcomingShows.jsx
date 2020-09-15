@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ShowInfo from "./ShowInfo";
 
 class UpcomingShows extends Component {
+    // This will all be changed to use context at a future date.
   state = {
     shows: [
       {
@@ -37,6 +38,7 @@ class UpcomingShows extends Component {
   render() {
     return (
       <div>
+          {/* The show dates will be generated dynamically in the future. It will also take in a range as props. */}
         <h2>Friday</h2>
         {this.state.shows.map(
           (show) =>

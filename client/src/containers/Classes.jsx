@@ -5,6 +5,7 @@ class Classes extends Component {
     return (
       <div>
         <h1>Classes</h1>
+        {/* This will have class information */}
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae rem
           libero incidunt, delectus facilis distinctio amet ullam ut assumenda
