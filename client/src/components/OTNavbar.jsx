@@ -7,6 +7,7 @@ const OTNavbar = () => {
     <div>
       <Navbar variant="dark" expand="sm" className="otNavbar">
         <Navbar.Brand className="navbarBrand">
+          {/* This will be replaced with a logo when the logo is created */}
           <Link to="/" className="brandLink">
             Onward Theatre
           </Link>

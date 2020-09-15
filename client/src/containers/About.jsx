@@ -4,6 +4,7 @@ const About = () => {
   return (
     <div>
       <h1>About Onward Theatre</h1>
+      {/* This will show a history and mission of the theatre. */}
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae rem
         libero incidunt, delectus facilis distinctio amet ullam ut assumenda
@@ -22,6 +23,7 @@ const About = () => {
         voluptatibus perferendis. A quasi officia sapiente fugiat ex? Omnis, rem
         quos?
       </p>
+      {/* This will have information about the staff or something */}
     </div>
   );
 };
