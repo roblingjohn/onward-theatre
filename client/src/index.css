@@ -33,3 +33,15 @@ a.brandLink {
 a.navlink {
   color: white;
 }
+
+.container {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.jumbotron {
+  margin-top: 10px;
+}
