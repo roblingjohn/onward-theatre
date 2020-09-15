@@ -19,14 +19,16 @@ function App() {
     <div className="App">
       <UnderConstruction />
       <Router>
-        <OTNavbar/>
-        <Switch>
-          <Route exact path="/shows" component={Shows} />
-          <Route exact path="/classes" component={Classes} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/contact" component={Contact} />
-          <Route exact path="/" component={Home} />
-        </Switch>
+        <OTNavbar />
+        <div className="container">
+          <Switch>
+            <Route exact path="/shows" component={Shows} />
+            <Route exact path="/classes" component={Classes} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/contact" component={Contact} />
+            <Route exact path="/" component={Home} />
+          </Switch>
+        </div>
       </Router>
     </div>
   );
