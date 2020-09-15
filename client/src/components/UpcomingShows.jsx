@@ -37,7 +37,6 @@ class UpcomingShows extends Component {
   render() {
     return (
       <div>
-        <h1>This Weekend at Onward:</h1>
         <h2>Friday</h2>
         {this.state.shows.map(
           (show) =>
