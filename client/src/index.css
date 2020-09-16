@@ -45,3 +45,9 @@ a.navlink {
 .jumbotron {
   margin-top: 10px;
 }
+
+.calendar {
+  height: 500px;
+}
+
+/* @import 'react-big-calendar/lib/css/react-big-calendar.css'; */
