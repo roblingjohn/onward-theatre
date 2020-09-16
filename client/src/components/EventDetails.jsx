@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import moment from "moment-timezone"
 import events from "../events/events";
 
 const EventDetails = (props) => {
@@ -13,7 +14,7 @@ const EventDetails = (props) => {
     <div>
         <Link to="/shows">back to calendar</Link>
       <h2>
-        {eventInfo.showTime.showDate} at {eventInfo.showTime.showTime}
+        {moment(eventInfo.start).format("dddd, MMMM DD")} at {moment(eventInfo.start).format("h:mm")}
       </h2>
       <h1>{eventInfo.title}</h1>
       <h2>{eventInfo.tagline}</h2>

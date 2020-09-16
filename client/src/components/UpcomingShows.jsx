@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import moment from 'moment-timezone'
 import ShowInfo from "./ShowInfo";
 import events from '../events/events'
 
@@ -17,7 +18,7 @@ class UpcomingShows extends Component {
             show.showTime.showDate === "Friday" && (
               <>
                 <ShowInfo
-                  showTime={show.showTime.showTime}
+                  showTime={moment(show.start).format("h:mm")}
                   showName={show.title}
                   tagline={show.tagline}
                   description={show.description}

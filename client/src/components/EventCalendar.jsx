@@ -16,6 +16,10 @@ class EventCalendar extends Component {
     redirect: false,
   };
 
+  componentDidMount() {
+    console.log(moment(this.state.shows[0].start).format("h:mm"))
+  }
+
   eventLink = "";
   eventInfo = {}
 
