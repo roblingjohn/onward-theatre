@@ -3,6 +3,7 @@ import { Calendar, momentLocalizer } from "react-big-calendar";
 // import moment from "moment";
 import moment from "moment-timezone";
 import "react-big-calendar/lib/css/react-big-calendar.css";
+import events from "../events/events"
 
 moment.tz.setDefault("America/New_York");
 
@@ -10,13 +11,7 @@ const localizer = momentLocalizer(moment);
 
 class EventCalendar extends Component {
   state = {
-    shows: [
-      {
-        start: new Date("2020-09-18 6:00"),
-        end: new Date("2020-09-18 6:00"),
-        title: "Some title",
-      },
-    ],
+    shows: events
   };
   render() {
     return (
