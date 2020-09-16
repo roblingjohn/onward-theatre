@@ -1,5 +1,6 @@
 export default [
   {
+    _id: 1,
     start: new Date("2020-09-18 18:00"),
     end: new Date("2020-09-18 19:00"),
     title: "Group Therapy",
@@ -9,6 +10,7 @@ export default [
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, distinctio. Molestiae odio voluptatum, perferendis hic tempora quo labore, ab nihil totam quas vero incidunt, earum harum ea animi dicta sed.",
   },
   {
+    _id: 2,
     start: new Date("2020-09-18 19:00"),
     end: new Date("2020-09-18 20:00"),
     title: "Cold Hearted Motherfuckers",
@@ -18,6 +20,7 @@ export default [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nesciunt ut ea consequatur? Culpa impedit incidunt ad consectetur? Repellat tempora architecto quos ipsum amet adipisci perferendis aliquid quia cumque ratione.",
   },
   {
+    _id: 3,
     start: new Date("2020-09-18 20:00"),
     end: new Date("2020-09-18 21:00"),
     title: "Murder Show",
@@ -27,6 +30,7 @@ export default [
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod doloribus fuga libero voluptatum modi nisi tempore eaque sed repellendus voluptatibus, similique inventore recusandae. Magnam optio eaque quo dolores ab ipsam.",
   },
   {
+    _id: 4,
     start: new Date("2020-09-19 21:00"),
     end: new Date("2020-09-19 21:59"),
     title: "Improvised Drinking Game",
