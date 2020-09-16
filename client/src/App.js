@@ -8,6 +8,7 @@ import Classes from "./containers/Classes";
 import OTNavbar from "./components/OTNavbar";
 import Contact from "./containers/Contact";
 import About from "./containers/About";
+import EventDetails from "./components/EventDetails";
 
 function App() {
   // useEffect(() => {
@@ -26,6 +27,7 @@ function App() {
             <Route exact path="/classes" component={Classes} />
             <Route exact path="/about" component={About} />
             <Route exact path="/contact" component={Contact} />
+            <Route path="/show/:id" component={EventDetails}/>
             <Route exact path="/" component={Home} />
           </Switch>
         </div>
