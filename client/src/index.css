@@ -50,4 +50,8 @@ a.navlink {
   height: 500px;
 }
 
+.onward-map {
+  margin: auto;
+}
+
 /* @import 'react-big-calendar/lib/css/react-big-calendar.css'; */
