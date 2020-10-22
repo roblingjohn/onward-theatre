@@ -1,20 +1,17 @@
 const express = require("express");
-// const connectDB = require("./config/db");
 const path = require("path");
 const mongoose = require("mongoose");
 const app = express();
 const PORT = process.env.PORT || 3001;
-// require("./database");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const routes = require("./routes");
+require("dotenv").config();
 
 let Event = require("./models/Event");
 
 app.use(cors());
 app.use(bodyParser.json());
-
-// connectDB();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json({ extended: false }));
@@ -34,10 +31,13 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 mongoose
-  .connect(process.env.MONGODB_URI || "mongodb://localhost:27017/onward-theatre", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(
+    process.env.MONGODB_URI || "mongodb://localhost:27017/onward-theatre",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
   .then(() => {
     console.log("connected to the database Onward Theatre");
   })
@@ -46,18 +46,6 @@ mongoose
     console.log(err);
   });
 const connection = mongoose.connection;
-
-// connection.once("open", function () {
-//   console.log("MongoDB database connection established successfully");
-// });
-
-//   .then(() => {
-//     console.log("Successfully connected to database.");
-//   })
-//   .catch((err) => {
-//     console.log("Unable to connect to database.");
-//     console.log(err);
-//   });
 
 app.listen(PORT, () => {
   console.log(`Epxress server running on http://localhost:${PORT}`);
