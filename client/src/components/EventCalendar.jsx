@@ -5,6 +5,7 @@ import { Redirect } from "react-router-dom";
 import moment from "moment-timezone";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import events from "../events/events";
+import API from "../util/API";
 
 moment.tz.setDefault("America/New_York");
 
@@ -12,21 +13,24 @@ const localizer = momentLocalizer(moment);
 
 class EventCalendar extends Component {
   state = {
-    shows: events,
+    shows: [],
     redirect: false,
   };
 
   componentDidMount() {
-    console.log(moment(this.state.shows[0].start).format("h:mm"))
+    API.getAllEvents().then((res) => {
+      console.log(res.data);
+      this.setState({ shows: res.data });
+    });
   }
 
   eventLink = "";
-  eventInfo = {}
+  eventInfo = {};
 
   onEventClick = (event) => {
     console.log(event.title);
     this.eventLink = `/show/${event._id}`;
-    this.eventInfo = event
+    this.eventInfo = event;
     this.setState({
       redirect: true,
     });
