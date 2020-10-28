@@ -13,9 +13,13 @@ const Event = new Schema({
   description: {
     type: String,
   },
-  date: {
+  start: {
     type: Date,
-    required: "Event date required",
+    required: "Event start required",
+  },
+  end: {
+    type: Date,
+    required: "Event end required",
   },
   eventType: {
     type: String,
