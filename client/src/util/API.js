@@ -1,7 +1,10 @@
 import axios from "axios";
 
 export default {
-    getAllEvents: function (data) {
-        return axios.get("/api/events")
-    }
-}
+  getAllEvents: function (data) {
+    return axios.get("/api/events");
+  },
+  getOneEvent: function (id) {
+    return axios.get("/api/events/" + id);
+  },
+};

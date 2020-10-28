@@ -8,7 +8,8 @@ router
 
 router
   .route("/events/:id")
-  .post(eventController.create)
+  .get(eventController.findById)
+  .post(eventController.create);
 //   .get(eventController.findById);
 
 module.exports = router;
