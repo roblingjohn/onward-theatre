@@ -1,4 +1,5 @@
 const db = require("../models");
+const moment = require("moment-timezone");
 
 module.exports = {
   findAll: function (req, res) {
@@ -10,9 +11,18 @@ module.exports = {
   },
   findById: function (req, res) {
     db.Event.findById(req.params.id)
-        .then(dbEvents => res.json(dbEvents))
-        .catch(err => res.status(422).json(err));
-},
+      .then((dbEvents) => res.json(dbEvents))
+      .catch((err) => res.status(422).json(err));
+  },
+  findThisWeek: function (req, res) {
+    db.Event.find({
+      start: { $gte: moment(), $lt: moment().add(7, "days") },
+    })
+      .then((dbEvents) => {
+        res.json(dbEvents);
+      })
+      .catch((err) => res.status(422).json(err));
+  },
   create: function (req, res) {
     db.Event.create(req.body)
       .then((dbEvents) => res.json(dbEvents))

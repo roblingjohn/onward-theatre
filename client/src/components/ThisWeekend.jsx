@@ -3,13 +3,13 @@ import moment from "moment-timezone";
 import ShowInfo from "./ShowInfo";
 import API from "../util/API";
 
-class UpcomingShows extends Component {
+class ThisWeekend extends Component {
   // This will all be changed to use context at a future date.
   state = {
     shows: [],
   };
   componentDidMount() {
-    API.getAllEvents().then((res) => {
+    API.getThisWeek().then((res) => {
       console.log(res.data);
       this.setState({ shows: res.data });
     });
@@ -52,4 +52,4 @@ class UpcomingShows extends Component {
   }
 }
 
-export default UpcomingShows;
+export default ThisWeekend;

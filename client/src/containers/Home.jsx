@@ -1,6 +1,7 @@
 import React from "react";
 import OTJumbotron from "../components/OTJumbotron";
 import UpcomingShows from "../components/UpcomingShows";
+import ThisWeekend from "../components/ThisWeekend"
 
 const Home = () => {
   return (
@@ -8,7 +9,7 @@ const Home = () => {
       <OTJumbotron />
       {/* The following section will change based on whether there is a show today */}
       <h1>This Weekend at Onward:</h1>
-      <UpcomingShows />
+      <ThisWeekend />
     </div>
   );
 };
