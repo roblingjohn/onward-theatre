@@ -6,6 +6,8 @@ router
   .get(eventController.findAll)
   .post(eventController.create);
 
+router.route("/events/thisweek").get(eventController.findThisWeek);
+
 router
   .route("/events/:id")
   .get(eventController.findById)
